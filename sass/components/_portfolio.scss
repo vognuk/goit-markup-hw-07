@@ -1,0 +1,164 @@
+/*
+ * Portfolio
+ */
+
+/* menu */
+
+.portfolio-menu-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  
+  .portfolio-button {
+    display: block;
+  
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+  
+    text-align: center;
+  
+    border-color: var(--team-box-color);
+    background-color: var(--team-box-color);
+    border-radius: 4px;
+    border-style: solid;
+    border: none;
+  
+    line-height: 38px;
+    padding-right: 22px;
+    padding-left: 22px;
+    margin-left: 8px;
+  }
+  
+  .menu-link:hover,
+  .menu-link:focus-within,
+  .menu-link:active {
+    color: var(--button-text-color);
+    background: var(--header-blue);
+    border: none;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 3px 1px rgba(0, 0, 0, 0.1);
+    transition: var(--main-transition);
+  }
+  
+  /* --- Portfolio cards---------------------------------- */
+  .portfolio-wraper {
+    width: 100%;
+  }
+  
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .portfolio-card {
+    display: block;
+  }
+  
+  .portfolio-item {
+    width: calc((100% - 30px * 2) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  
+    border: 1px solid;
+    border-color: var(--team-box-color);
+  }
+  
+  .portfolio-item:nth-child(3n) {
+    margin-right: 0px;
+  }
+  
+  .portfolio-image {
+     width: 100%;
+  }
+  
+  /*animation*/
+  
+  .portfolio-jumping-box {
+    position: relative;
+  
+    /* display: flex; */
+    /* width: 100%; */
+  
+    overflow: hidden;
+   }
+  
+  .jumping-text {
+    position: absolute;
+    opacity: 0;
+  
+    transform: translateY(100%);
+    transition: var(--main-transition);
+    
+    width: 100%;
+    height: 100%;
+    padding-top: 63px;
+    padding-right: 24px;
+    padding-bottom: 63px;
+    padding-left: 24px;
+    top: 0;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+    vertical-align: top;
+    letter-spacing: 0.03em;
+    color: var(--button-text-color);
+  
+    background-color: var(--jumping-text-bgr);
+    }
+    
+    .portfolio-item:hover .jumping-text,
+    .portfolio-item:focus-within .jumping-text,
+    .portfolio-item:active .jumping-text { /* для IE<7 */
+      opacity: 1;
+      transform: translateY(0);
+      transition: var(--main-transition);
+    }
+  
+    .portfolio-item:hover,
+    .portfolio-item:focus-within,
+    .portfolio-item:active {
+      box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.12);
+      transition: var(--main-transition);
+  }
+  
+  /* Portfolio animation end */
+  
+  .card-title {
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 4px;
+    margin-left: 24px;
+  
+    font-family: Roboto;
+    font-style: normal;
+    color: var(--title-color);
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+  }
+  
+  .card-subtitle {
+    display: block;
+  
+    font-family: Roboto;
+    font-style: normal;
+    color: var(--subtitle-color);
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+  
+    margin-left: 24px;
+    margin-bottom: 20px;
+  }
+  

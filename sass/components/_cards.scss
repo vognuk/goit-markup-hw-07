@@ -1,0 +1,71 @@
+/* 
+ * team section
+ *
+ */
+ 
+.team-member-box {
+    width: calc((100% - 30px * 3) / 4);
+    margin-right: 30px;
+  
+    background-color: var(--button-text-color);
+    border-radius: 0px 0px 4px 4px;
+    
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
+  }
+  
+  .team-member-box > .social-list {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .team-member-box:nth-child(4n) {
+    margin-right: 0px;
+  }
+  
+  .image-sizer {
+    position: relative;
+  
+    display: flex;
+    width: 100%;
+    height: 260px;
+  
+    overflow: hidden;
+  }
+  
+  .member-image {
+    position: absolute;
+  
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  
+  .member-name {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  
+    font-family: Roboto;
+    font-style: normal;
+    color: var(--title-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+  
+  .member-responsibility {
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 16px;
+  
+    font-family: Roboto;
+    font-style: normal;
+    color: var(--subtitle-color);
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }

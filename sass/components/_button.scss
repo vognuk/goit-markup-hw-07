@@ -1,0 +1,37 @@
+.button-style {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    /* margin-bottom: 200px; */
+  
+    border-radius: 4px;
+    background: var(--header-blue);
+
+    @include font(Roboto, normal, bold, 16px, 30px, center, 0.06em, $button-text-color, none);
+
+    padding-top: 10px;
+    padding-right: 32px;
+    padding-bottom: 10px;
+    padding-left: 32px;
+    line-height: 38px;
+    letter-spacing: 0.06em;
+  
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
+  }
+
+  .hero .button-style {
+    margin-bottom: 224px;
+  }
+
+  .hero-submit {
+    padding: 10px 55px 10px 55px;
+
+    margin-left: 50%;
+  
+    transform: translateX(-50%);
+  }
+
+  
+
