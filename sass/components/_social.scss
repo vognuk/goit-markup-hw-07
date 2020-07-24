@@ -1,64 +1,60 @@
 /* 
-  * elenent with links of social webs
-  *
-  */
+ * elenent with links of social webs
+ *
+ */
 
-  .social-list {
-    display: flex;
-    justify-content: space-between;
-   
-    width: 206px;
-    height: 44px;
-    margin-bottom: 25px;
+.social-list {
+  display: flex;
+  justify-content: space-between;
+
+  @include flex(
+    flex,
+    row,
+    nowrap,
+    space-between,
+    center
+  );
   
-    list-style: none;
-  }
+  width: 206px;
+  height: 44px;
+  margin-bottom: 25px;
+
+  list-style: none;
   
-  .social-list:not(:last-child) {
+  &:not(:last-child) {
     margin-left: 10px;
   }
+}
+
+.social-box {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 11px;
   
-  .social-box {
-    display: block;
-    width: 44px;
-    height: 44px;
-    padding: 11px;
-    
-    border: none;
-    border-radius: 50%;
-  }
-  
-  /* svg */
-  
-  .team-icon {
-    width: 20px;
-    height: 20px;
-  
-    fill: var(--social-icon-color);
-    transition: var(--main-transition);
-  }
-  
-  .footer-icon {
-    width: 20px;
-    height: 20px;
-  
-    fill: var(--button-text-color);
-    transition: var(--main-transition);
-  }
-  
-  /* social webs animation */
-  
-  .social-web:hover,
-  .social-web:focus-within,
-  .social-web:active {
-    background-color: var(--header-blue);
-  }
-  
-  .social-web:hover svg,
-  .social-web:focus-within svg,
-  .social-web:active svg {
-    fill: var(--button-text-color);
-    transition: var(--main-transition);
-  }
-  
-   
+  border: none;
+  border-radius: 50%;
+}
+
+/* svg */
+
+.team-icon {
+  @extend %social-icon__svg-size;
+
+  fill: $social-icon-color;
+  transition: $main-transition;
+}
+
+.footer-icon {
+  @extend %social-icon__svg-size;
+
+  fill: $button-text-color;
+  transition: $main-transition;
+}
+
+/* social webs animation */
+
+.social-web {
+  @extend %link-animation-placeholder;
+  @extend %icon-animation-placeholder;
+}   

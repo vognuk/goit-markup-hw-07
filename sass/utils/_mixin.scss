@@ -1,5 +1,3 @@
-// @mixin для шрифтов и флекса
-
 @mixin font($family, $style, $weight, $size, $line-h, $align, $letter-spacing, $text-color, $text-transform) {
     font-family: $family;
     font-style: $style;
@@ -12,19 +10,10 @@
     text-transform: $text-transform;
 }
 
-@mixin flex($display, $flex-direction, $justify-content, $align-items) {
+@mixin flex($display, $flex-direction, $flex-wrap, $justify-content, $align-items) {
     display: $display;
     flex-direction: $flex-direction;
+    flex-wrap: $flex-wrap;
     justify-content: $justify-content;
     align-items: $align-items;
 }
-
-// usage
-//  @include font($font-logo, 26px, 1.193, 700);
-
-// @mixin flex($ff, $fs, $lh: 1, $fw: 400) {
-//     font-family: $ff;
-//     font-size: $fs;
-//     font-weight: $fw;
-//     line-height: $lh;
-//   }

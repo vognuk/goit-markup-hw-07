@@ -1,11 +1,11 @@
 .hero {
-
-@include flex(
-  flex, 
-  column, 
-  center, 
-  center
-  );
+  @include flex(
+    flex, 
+    column, 
+    nowrap,
+    center, 
+    center
+    );
 
     max-width: 1600px;
     height: 600px;
@@ -38,7 +38,7 @@
       0.06em, 
       $button-text-color, 
       uppercase
-      );
+    );
      
     max-width: 695px;
   }

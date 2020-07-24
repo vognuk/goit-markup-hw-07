@@ -1,66 +1,44 @@
-/* 
- * Header
- *
- */
 
-
-
- header .container {
+/* Main menu */
+.header-menu {
   display: flex;
-  justify-content: space-between;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  
+  list-style-type: none;
 }
-
- /* Main menu */
-
-
-
-.logo-container {
-  display: block;
-  margin-right: 85px;
-
-  line-height: 80px;
-  white-space: nowrap;
-}
-
-header > .container {
-  display: flex;
-  /* justify-content: space-between; */
-}
-
-
-
-
 
 .main-menu-link {
   position: relative;
 
   display: block;
- 
-  line-height: 80px;
+
+  @include font(
+    Roboto,
+    normal,
+    500,
+    14px,
+    80px,
+    // 16px,
+    center,
+    0.02em,
+    $title-color,
+    none
+  );
+
+  outline: none;
+
+  @extend %link-animation-placeholder;
 }
 
 
+.header-pages {
+  margin-right: 305px;
 
-/* Menu item underline */
-
-
-
-/* Main menu animation */
-
-.main-menu-link:hover,
-.main-menu-link:focus-within,
-.main-menu-link:active {
-  color: var(--header-blue);
-  transition: var(--main-transition);
+  & > li:not(:last-child) {
+    display: block;
+    margin-right: 50px;
+  }
 }
 
-/* Main menu contacts */
-
-
-
-/* contacts svg */
 .header-icon {
   display: block;
   width: 15px;
@@ -68,100 +46,72 @@ header > .container {
   margin-top: auto;
   margin-bottom: auto;
 
-  fill: var(--subtitle-color);
+  fill: $subtitle-color;
 }
 
 /* contacts animation */
 
-.contact-link:hover,
-.contact-link:focus-within,
-.contact-link:active {
-  color: var(--header-blue);
-  transition: var(--main-transition);
+.contact-link {
+  display: inline-flex;
+
+  @include font(
+    Roboto,
+    normal,
+    500,
+    14px,
+    16px,
+    center,
+    0.02em,
+    $subtitle-color,
+    none
+  );
+  
+  line-height: 80px;
+
+  & {
+    @extend %link-animation-placeholder;
+
+    &:hover  svg,
+    &:focus-within  svg,
+    &:active svg {
+      // color: $header-blue;
+      fill: $header-blue;
+      transition: $main-transition;
+    }
+  }
 }
-.contact-link:hover svg,
-.contact-link:focus-within svg,
-.contact-link:active svg {
-  fill: var(--header-blue);
-  transition: var(--main-transition);
+
+
+.header-contacts > li:not(:last-child) {
+  margin-right: 30px;
+}
+  
+.header-number {
+  display: block;
+
+  padding: 0px;
+  border: 0px;
+
+  margin-top: auto;
+  margin-bottom: auto;
+  white-space: nowrap;
 }
 
-
-.main-menu-link {
-    display: block;
-  
-    font-family: Roboto;
-    font-style: normal;
-    color: var(--title-color);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-  
-    outline: none;
-  }
-
-  .header-menu {
-    display: flex;
-   
-    list-style-type: none;
-  }
-
-  .header-pages {
-    margin-right: 305px;
-  }
-
-  .header-pages > li:not(:last-child) {
-    display: block;
-    margin-right: 50px;
-  }
-
-  .current-page {
-    color: var(--header-blue);
-  }
-  
-  .current-page:after {
+.current-page {
+  color: $header-blue;
+ 
+  &:after {
     position: absolute;
-  
+
     display: block;
     content: '';
-  
+
     width: 100%;
     height: 4px;
     left: 0px;
     bottom: 0px;
-  
+
     border-radius: 2px;
-    background-color: var(--header-blue);
+    background-color: $header-blue;
   }
-
-  .header-contacts > li:not(:last-child) {
-    margin-right: 30px;
-  }
-  
-  .contact-link {
-    display: inline-flex;
-  
-    font-family: Roboto;
-    font-style: normal;
-    color: var(--subtitle-color);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    
-    line-height: 80px;
-  }
-  
-  .header-number {
-    display: block;
-  
-    padding: 0px;
-    border: 0px;
-  
-    margin-top: auto;
-    margin-bottom: auto;
-    white-space: nowrap;
-  }
-
+}

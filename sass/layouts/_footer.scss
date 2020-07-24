@@ -3,188 +3,150 @@
  *
  */
 
- footer {
-    /* width: auto; */
-      padding-bottom: 60px;
-      background-color: var(--footer-color);
-    }
-    
-    footer .container {
-      padding-bottom: 0px;
-    }
-    
-    .footer-axis {
-      display: flex;
-      justify-content: center;
-      align-items: baseline;
-    }
-    
-    /* logo style */
-    .footer-logo-link {
-      display: block;
-      margin-bottom: 20px;
-    }
-    
-    .logo-1-2 {
-      font-family: var(--logo-font);
-      color: var(--header-blue);
-    
-    }
-    
-    .logo-2-2 {
-      @include font(
-        Raleway, 
-        normal, 
-        bold, 
-        26px, 
-        31px, 
-        normal, 
-        0.03em, 
-        $logo-color-2-2, 
-        none
-        );
-    }
+footer {
+  padding-bottom: 60px;
+  background-color: $footer-color;
+}
 
-    .logo-2-3 {
-      @include font(
-        Raleway, 
-        normal, 
-        bold, 
-        26px, 
-        31px, 
-        normal, 
-        0.03em, 
-        $button-text-color, 
-        none
-        );
-    }
+footer .container {
+  padding-bottom: 0px;
+}
+    
+.footer-axis {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
 
+/* address column */
+    
+.footer-contacts {
+  @include flex(
+    flex,
+    column,
+    nowrap,
+    left,
+    inherit
+);
+
+  width: calc((50% - 45px) / 2);
+  margin-right: 70px;
+}
+    
+footer .contact-link {
+  line-height: 19px;
+}
+
+.footer-form:last-child {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 15px);
+}
+
+.contact-item:not(:last-child) {
+  width: 100%;
+  padding-bottom: 18px;
+}
+
+.address-post {
+  @include font(
+    Roboto, 
+    normal, 
+    normal, 
+    14px, 
+    24px, 
+    normal, 
+    0.03em, 
+    $button-text-color, 
+    none
+  );
+}
   
-    /* address column */
-    
-    .footer-contacts {
-      @include flex(
-        flex,
-        column,
-        left,
-        none
-      );
-
-      width: calc((50% - 45px) / 2);
-      margin-right: 70px;
-    }
-    
-    footer .contact-link {
-      line-height: 19px;
-    }
-    
-    .footer-form:last-child {
-      display: flex;
-      flex-direction: column;
-      width: calc(50% - 15px);
-     }
-    
-    .contact-item:not(:last-child) {
-      width: 100%;
-      padding-bottom: 18px;
-    }
-    
-    .address-post {
-      /* margin-bottom: 10px; */
-    
-      font-family: Roboto;
-      font-style: normal;
-      color: var(--button-text-color);
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 24px;
-      letter-spacing: 0.03em;
-    }
-    
-    .social-link {
-      background-color: var(--footer-social-bgr);
-    }
+.social-link {
+  background-color: $footer-social-bgr;
+}
     
     /* --- Subscribe */
     
-    .footer-subscribe {
-      margin-bottom: 20px;
+.footer-subscribe {
+  margin-bottom: 20px;
+
+  @include font(
+    Roboto,
+    normal,
+    bold,
+    14px,
+    16px,
+    left,
+    0.03em,
+    $button-text-color,
+    uppercase
+  );
+}
     
-      @include font (
-        Roboto,
-        normal,
-        bold,
-        14px,
-        16px,
-        0.03em,
-        $button-text-color,
-        uppercase
-      );
-    }
+.footer-email {
+  @include flex(
+    flex,
+    row,
+    nowrap,
+    center,
+    none
+  );
+}
     
-    .footer-email {
-      @include flex(
-        flex,
-        row,
-        center,
-        none
-      );
-    }
+.footer-input {
+  width: calc(100% - 3*30px);
+  min-width: 50px;
+  height: 50px;
+  padding-left: 12px;
+  background-color: $footer-color;
+
+  @include font(
+    Roboto,
+    normal,
+    normal,
+    16px,
+    30px,
+    none,
+    0.03em,
+    $contact-color,
+    none
+  );
     
-    .footer-input {
-      width: calc(100% - 3*30px);
-      min-width: 50px;
-      height: 50px;
-      padding-left: 12px;
-      background-color: var(--footer-color);
+  border: 1px solid $input-border-color;
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+  border-radius: 4px;
+  background-color: $footer-color;
+  border-radius: 4px;
+}
     
-      @include font(
-        Roboto,
-        normal,
-        normal,
-        16px,
-        30px,
-        none,
-        0.03em,
-        $contact-color,
-        none
-      );
-    
-      border: 1px solid var(--input-border-color);
-      /* border: 1px solid rgba(255, 255, 255, 0.3); */
-      border-radius: 4px;
-      background-color: var(--footer-color);
-      border-radius: 4px;
-    }
-    
-    .button-box {
-      margin-top: 0px;
-      margin-left: 12px;
-    
-      padding-top: 10px;
-      padding-bottom: 10px;
-      padding-right: 28px;
-      padding-left: 29px;
-    
-      border: none;
-    }
-    
-    .button-box svg {
-      fill: var(--button-text-color);
-      margin-left: 10px;
-    }
-    
-    .input-text {
-      @include font (
-        Roboto,
-        normal,
-        bold,
-        16px,
-        30px,
-        left,
-        0.06em,
-        $contact-color,
-        none
-      );
-    }
-    
+.button-box {
+  margin-top: 0px;
+  margin-left: 12px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 28px;
+  padding-left: 29px;
+
+  border: none;
+}
+
+.button-box svg {
+  fill: $button-text-color;
+  margin-left: 10px;
+}
+
+.input-text {
+  @include font (
+    Roboto,
+    normal,
+    bold,
+    16px,
+    30px,
+    left,
+    0.06em,
+    $contact-color,
+    none
+  );
+}
