@@ -489,6 +489,90 @@ a:visited {
           transform: translateX(-50%);
 }
 
+/* 
+ * Footer form
+ *
+ */
+.footer-subscribe {
+  margin-bottom: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.footer-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.footer-input {
+  width: calc(100% - 3*30px);
+  min-width: 50px;
+  height: 50px;
+  padding-left: 12px;
+  background-color: #2f303a;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: left;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+  border-radius: 4px;
+  background-color: #2f303a;
+  border-radius: 4px;
+}
+
+.button-box {
+  margin-top: 0px;
+  margin-left: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 28px;
+  padding-left: 29px;
+  border: none;
+}
+
+.button-box svg {
+  fill: #ffffff;
+  margin-left: 10px;
+}
+
+.input-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: left;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: none;
+}
+
 .logo-container {
   display: block;
   margin-right: 85px;
@@ -507,7 +591,7 @@ a:visited {
   font-weight: bold;
   font-size: 26px;
   line-height: 31px;
-  text-align: normal;
+  text-align: center;
   letter-spacing: 0.03em;
   color: #2196f3;
   text-transform: none;
@@ -519,7 +603,7 @@ a:visited {
   font-weight: bold;
   font-size: 26px;
   line-height: 31px;
-  text-align: normal;
+  text-align: center;
   letter-spacing: 0.03em;
   color: #000000;
   text-transform: none;
@@ -531,7 +615,7 @@ a:visited {
   font-weight: bold;
   font-size: 26px;
   line-height: 31px;
-  text-align: normal;
+  text-align: center;
   letter-spacing: 0.03em;
   color: #ffffff;
   text-transform: none;
@@ -1236,7 +1320,7 @@ footer .contact-link {
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  text-align: normal;
+  text-align: left;
   letter-spacing: 0.03em;
   color: #ffffff;
   text-transform: none;
@@ -1247,83 +1331,4 @@ footer .contact-link {
 }
 
 /* --- Subscribe */
-.footer-subscribe {
-  margin-bottom: 20px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: left;
-  letter-spacing: 0.03em;
-  color: #ffffff;
-  text-transform: uppercase;
-}
-
-.footer-email {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: none;
-      -ms-flex-align: none;
-          align-items: none;
-}
-
-.footer-input {
-  width: calc(100% - 3*30px);
-  min-width: 50px;
-  height: 50px;
-  padding-left: 12px;
-  background-color: #2f303a;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 30px;
-  text-align: none;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-  text-transform: none;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  /* border: 1px solid rgba(255, 255, 255, 0.3); */
-  border-radius: 4px;
-  background-color: #2f303a;
-  border-radius: 4px;
-}
-
-.button-box {
-  margin-top: 0px;
-  margin-left: 12px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 28px;
-  padding-left: 29px;
-  border: none;
-}
-
-.button-box svg {
-  fill: #ffffff;
-  margin-left: 10px;
-}
-
-.input-text {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 30px;
-  text-align: left;
-  letter-spacing: 0.06em;
-  color: rgba(255, 255, 255, 0.6);
-  text-transform: none;
-}
 /*# sourceMappingURL=main.css.map */
