@@ -122,22 +122,23 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-
-  & ~ .hero-custom-checkbox:before {
-    content: '';
-
-    display: inline-flex;
-    width: 16px;
-    height: 16px;
-    
-    border: 2px solid $title-color;
-    border-radius: 2px;
-    margin-right: 8px;
-    flex-shrink: 0;
-
-    transition: $main-transition;
-  }
 }
+
+.hero-form-checkbox  ~ .hero-custom-checkbox:before {
+  content: '';
+
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  
+  border: 2px solid $title-color;
+  border-radius: 2px;
+  margin-right: 8px;
+  flex-shrink: 0;
+
+  transition: $main-transition;
+}
+
   
 .hero-custom-checkbox {
   @include font(
