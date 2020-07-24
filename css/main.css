@@ -519,9 +519,9 @@ a:visited {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
 }
 
 .footer-input {
