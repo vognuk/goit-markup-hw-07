@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.main-menu-link:hover, .contact-link:hover, .social-web:hover, .main-menu-link:focus-within, .contact-link:focus-within, .social-web:focus-within, .main-menu-link:active, .contact-link:active, .social-web:active {
+.main-menu-link:hover, .contact-link:hover, .main-menu-link:focus-within, .contact-link:focus-within, .main-menu-link:active, .contact-link:active {
   color: #2196f3;
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -7,9 +7,18 @@
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-web:hover svg,
-.social-web:focus-within svg,
-.social-web:active svg {
+.social-shortcut:hover, .social-shortcut:focus-within, .social-shortcut:active {
+  background-color: #2196f3;
+  color: #2196f3;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-shortcut:hover svg,
+.social-shortcut:focus-within svg,
+.social-shortcut:active svg {
   fill: #ffffff;
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -214,17 +223,15 @@ a:visited {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -236,15 +243,6 @@ a:visited {
 
 .social-list:not(:last-child) {
   margin-left: 10px;
-}
-
-.social-box {
-  display: block;
-  width: 44px;
-  height: 44px;
-  padding: 11px;
-  border: none;
-  border-radius: 50%;
 }
 
 /* svg */
@@ -265,6 +263,15 @@ a:visited {
 }
 
 /* social webs animation */
+.social-shortcut {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 11px;
+  border: none;
+  border-radius: 50%;
+}
+
 .modal-close {
   position: absolute;
   right: 8px;

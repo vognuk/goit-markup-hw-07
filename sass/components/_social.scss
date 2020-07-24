@@ -4,9 +4,6 @@
  */
 
 .social-list {
-  display: flex;
-  justify-content: space-between;
-
   @include flex(
     flex,
     row,
@@ -24,16 +21,6 @@
   &:not(:last-child) {
     margin-left: 10px;
   }
-}
-
-.social-box {
-  display: block;
-  width: 44px;
-  height: 44px;
-  padding: 11px;
-  
-  border: none;
-  border-radius: 50%;
 }
 
 /* svg */
@@ -54,7 +41,15 @@
 
 /* social webs animation */
 
-.social-web {
-  @extend %link-animation-placeholder;
+.social-shortcut {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 11px;
+  
+  border: none;
+  border-radius: 50%;
+
+  @extend %social-animation-placeholder;
   @extend %icon-animation-placeholder;
-}   
+}

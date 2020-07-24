@@ -1,4 +1,4 @@
-%link-animation-placeholder  {
+%link-animation-placeholder{
     &:hover,
     &:focus-within,
     &:active {
@@ -7,7 +7,17 @@
     }
 }
 
-%icon-animation-placeholder {   
+%social-animation-placeholder{
+    &:hover,
+    &:focus-within,
+    &:active {
+        background-color: $header-blue;
+        color: $header-blue;
+        transition: $main-transition;
+    }
+}
+
+%icon-animation-placeholder{   
     &:hover svg,
     &:focus-within svg,
     &:active svg {
