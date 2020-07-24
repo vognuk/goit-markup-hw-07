@@ -397,7 +397,7 @@ a:visited {
   appearance: none;
 }
 
-.hero-form-checkbox ~ .hero-form-checkbox:before {
+.hero-form-checkbox ~ .hero-custom-checkbox:before {
   content: '';
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
